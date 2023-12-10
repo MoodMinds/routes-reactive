@@ -9,7 +9,8 @@ import reactor.core.publisher.Mono;
  * @param <V> the type of the emitting values
  * @param <E> the type of possible exception that might be thrown
  */
-public class MonoEmittable<V, E extends Exception> extends MonoPublishable<V, E> implements PublishableEmittable<V, E> {
+public class MonoEmittable<V, E extends Exception> extends MonoPublishable<V, E>
+        implements PublishableEmittable<V, E> {
 
     /**
      * Construct the object with the given {@link Mono} instance.

@@ -9,7 +9,8 @@ import reactor.core.publisher.Flux;
  * @param <V> the type of the emitting values
  * @param <E> the type of possible exception that might be thrown
  */
-public class FluxEmittable<V, E extends Exception> extends FluxPublishable<V, E> implements PublishableEmittable<V, E> {
+public class FluxEmittable<V, E extends Exception> extends FluxPublishable<V, E>
+        implements PublishableEmittable<V, E> {
 
     /**
      * Construct the object with the given {@link Flux} instance.
