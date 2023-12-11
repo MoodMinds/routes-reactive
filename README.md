@@ -1,10 +1,10 @@
 # Asynchronous Reactive implementation of the [Routes](https://github.com/MoodMinds/routes) SPI
 
 This implementation of the [Routes SPI](https://github.com/MoodMinds/routes) offers support for asynchronous reactive execution
-through subscription. It utilizes [Reactive Streams Publishable](https://github.com/MoodMinds/reactive-streams-publishable)
-for its implementation. You can employ it as a foundational base to extend the [Routes SPI](https://github.com/MoodMinds/routes)
-or as a client library for your code. This is particularly beneficial when complex logic definitions demand enhanced readability,
-surpassing what Project Reactor can provide.
+through subscription and utilizes [Reactive Streams Publishable](https://github.com/MoodMinds/reactive-streams-publishable)
+for this. You can employ it as a foundational base to extend the [Routes SPI](https://github.com/MoodMinds/routes) or as a client
+library for your code. This is particularly beneficial when complex logic definitions demand enhanced readability, surpassing
+what Project Reactor can provide.
 
 ## Understanding the Core
 
