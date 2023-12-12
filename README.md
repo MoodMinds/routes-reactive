@@ -4,7 +4,7 @@ This implementation of the [Routes SPI](https://github.com/MoodMinds/routes) off
 through subscription and utilizes [Reactive Streams Publishable](https://github.com/MoodMinds/reactive-streams-publishable)
 for this. You can employ it as a foundational base to extend the [Routes SPI](https://github.com/MoodMinds/routes) or as a client
 library for your code. This is particularly beneficial when complex logic definitions demand enhanced readability, surpassing
-what Project Reactor can provide.
+what [Project Reactor](https://projectreactor.io) can provide.
 
 ## Understanding the Core
 
