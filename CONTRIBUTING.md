@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Thank you for your interest in contributing to Routes Reactive!
+Thank you for your interest in contributing to **Routes Reactive**!
 
 **Project Status: Experimental and Under Development**
 
