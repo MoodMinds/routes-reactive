@@ -53,7 +53,7 @@ public interface PublishableEmittable<V, E extends Exception> extends Publishabl
      * @throws TraverseSupportException an exception indicating that synchronous traversal is not supported
      */
     @Override
-    default <H1 extends Exception, H2 extends Exception> boolean sequence(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2 {
+    default <H1 extends Exception, H2 extends Exception> boolean sequence(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<?, ?, ?> ctx) throws E, H1, H2 {
         requireNonNull(traverse); requireNonNull(ctx);
         throw new TraverseSupportException("Asynchronous subscription only.");
     }
@@ -93,7 +93,7 @@ public interface PublishableEmittable<V, E extends Exception> extends Publishabl
      * @throws TraverseSupportException an exception indicating that synchronous traversal is not supported
      */
     @Override
-    default <H1 extends Exception, H2 extends Exception> boolean traverse(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2 {
+    default <H1 extends Exception, H2 extends Exception> boolean traverse(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<?, ?, ?> ctx) throws E, H1, H2 {
         requireNonNull(traverse); requireNonNull(ctx);
         throw new TraverseSupportException("Asynchronous subscription only.");
     }
@@ -133,7 +133,7 @@ public interface PublishableEmittable<V, E extends Exception> extends Publishabl
      * @throws TraverseSupportException an exception indicating that synchronous traversal is not supported
      */
     @Override
-    default <H1 extends Exception, H2 extends Exception> boolean parallel(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2 {
+    default <H1 extends Exception, H2 extends Exception> boolean parallel(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<?, ?, ?> ctx) throws E, H1, H2 {
         requireNonNull(traverse); requireNonNull(ctx);
         throw new TraverseSupportException("Asynchronous subscription only.");
     }
@@ -173,7 +173,7 @@ public interface PublishableEmittable<V, E extends Exception> extends Publishabl
      * @throws TraverseSupportException an exception indicating that synchronous traversal is not supported
      */
     @Override
-    default <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean sequence(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2, H3 {
+    default <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean sequence(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<?, ?, ?> ctx) throws E, H1, H2, H3 {
         requireNonNull(traverse); requireNonNull(ctx);
         throw new TraverseSupportException("Asynchronous subscription only.");
     }
@@ -213,7 +213,7 @@ public interface PublishableEmittable<V, E extends Exception> extends Publishabl
      * @throws TraverseSupportException an exception indicating that synchronous traversal is not supported
      */
     @Override
-    default <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean traverse(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2, H3 {
+    default <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean traverse(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<?, ?, ?> ctx) throws E, H1, H2, H3 {
         requireNonNull(traverse); requireNonNull(ctx);
         throw new TraverseSupportException("Asynchronous subscription only.");
     }
@@ -253,7 +253,7 @@ public interface PublishableEmittable<V, E extends Exception> extends Publishabl
      * @throws TraverseSupportException an exception indicating that synchronous traversal is not supported
      */
     @Override
-    default <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean parallel(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2, H3 {
+    default <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean parallel(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<?, ?, ?> ctx) throws E, H1, H2, H3 {
         requireNonNull(traverse); requireNonNull(ctx);
         throw new TraverseSupportException("Asynchronous subscription only.");
     }
