@@ -15,7 +15,6 @@ The concrete execution representation of this [Routes](https://github.com/MoodMi
 import org.moodminds.reactive.FluxPublishable;
 import org.moodminds.route.Stream;
 import org.moodminds.route.Stream2;
-import org.moodminds.route.reactive.FluxEmittable;
 import org.moodminds.route.reactive.Routes;
 import reactor.core.publisher.Mono;
 
@@ -23,6 +22,7 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 import static java.lang.System.getenv;
+import static org.moodminds.route.reactive.Routes.routes;
 
 class Sample {
 
@@ -45,15 +45,15 @@ class Sample {
 
     static final Stream2<Boolean, String, String, RuntimeException> CATCHING = ($, bool, str) -> $
             .stream(STREAMING, bool, str)
-            .caught(ex -> $
-                .supply(ex, Exception::getMessage))
-            .caught(IOException.class, ioEx -> $
-                .supply(ioEx, RuntimeException::new, $::except));
+                .caught(Exception.class, ex -> $
+                    .supply(ex, Exception::getMessage))
+                .caught(IOException.class, ioEx -> $
+                    .supply(ioEx, RuntimeException::new, $::except));
 
     public void subscribe() {
 
         // materialize to FluxEmittable<String, RuntimeException>
-        FluxPublishable<String, Exception> flux = new Routes().stream(CATCHING, true, "test");
+        FluxPublishable<String, Exception> flux = routes().stream(CATCHING, true, "test");
 
         flux.subscribe();
 
