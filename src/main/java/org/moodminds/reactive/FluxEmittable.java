@@ -1,6 +1,5 @@
-package org.moodminds.route.reactive;
+package org.moodminds.reactive;
 
-import org.moodminds.reactive.FluxPublishable;
 import reactor.core.publisher.Flux;
 
 /**
@@ -18,7 +17,21 @@ public class FluxEmittable<V, E extends Exception> extends FluxPublishable<V, E>
      * @param flux the given {@link Flux} instance
      * @throws NullPointerException if the {@link Flux} specified is {@code null}
      */
-    protected FluxEmittable(Flux<V> flux) {
+    public FluxEmittable(Flux<V> flux) {
         super(flux);
+    }
+
+
+    /**
+     * Return a FluxEmittable by the given {@link Flux}.
+     *
+     * @param flux the given {@link Flux}
+     * @param <V> the type of item values
+     * @param <E> the type of potential exceptions
+     * @return a FluxEmittable by the given {@link Flux}
+     * @throws NullPointerException if the {@link Flux} specified is {@code null}
+     */
+    public static <V, E extends Exception> FluxEmittable<V, E> flux(Flux<V> flux) {
+        return new FluxEmittable<>(flux);
     }
 }

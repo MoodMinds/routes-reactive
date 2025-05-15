@@ -1,6 +1,5 @@
-package org.moodminds.route.reactive;
+package org.moodminds.reactive;
 
-import org.moodminds.reactive.MonoPublishable;
 import reactor.core.publisher.Mono;
 
 /**
@@ -18,7 +17,21 @@ public class MonoEmittable<V, E extends Exception> extends MonoPublishable<V, E>
      * @param mono the given {@link Mono} instance
      * @throws NullPointerException if the {@link Mono} specified is {@code null}
      */
-    protected MonoEmittable(Mono<V> mono) {
+    public MonoEmittable(Mono<V> mono) {
         super(mono);
+    }
+
+
+    /**
+     * Return a MonoPublishable by the given {@link Mono}.
+     *
+     * @param mono the given {@link Mono}
+     * @param <V> the type of item values
+     * @param <E> the type of potential exceptions
+     * @return a MonoPublishable by the given {@link Mono}
+     * @throws NullPointerException if the {@link Mono} specified is {@code null}
+     */
+    public static <V, E extends Exception> MonoEmittable<V, E> mono(Mono<V> mono) {
+        return new MonoEmittable<>(mono);
     }
 }

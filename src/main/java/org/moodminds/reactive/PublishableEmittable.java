@@ -1,9 +1,8 @@
-package org.moodminds.route.reactive;
+package org.moodminds.reactive;
 
 import org.moodminds.elemental.Association;
 import org.moodminds.elemental.KeyValue;
 import org.moodminds.emission.Emittable;
-import org.moodminds.reactive.Publishable;
 import org.moodminds.function.Executable1Throwing2;
 import org.moodminds.function.Executable1Throwing3;
 import org.moodminds.traverse.TraverseSupportException;
